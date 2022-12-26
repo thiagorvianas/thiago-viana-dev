@@ -7,11 +7,10 @@ import { MobileMenu } from './MobileMenu';
 export function Header() {
   return (
     <C.Container>
-    { useWindowDimensions().width >= 1023 ?
-      <DesktopMenu /> :
-      <MobileMenu />
-    }
-
+      { useWindowDimensions().width >= 1023 ?
+        <DesktopMenu /> :
+        <MobileMenu />
+      }
     </C.Container>
   );
 }
