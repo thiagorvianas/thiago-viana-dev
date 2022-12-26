@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import * as C from './styles';
 import logoFundoBranco from '../../../images/logo-fundo-branco.png';
+import { Footer } from '../../Footer';
 
 export function MobileMenu() {
   const [openMenu, SetOpenMenu] = useState(false);
@@ -23,7 +24,7 @@ export function MobileMenu() {
         { openMenu &&
           <C.OpenedMenu>
             <C.NavItems>
-              <Link to="/">
+              <Link className="nav-item" to="/">
                 <C.Selected selected={ location === "/" } />
 
                 <C.LinkText selected={ location === "/" }>
@@ -31,7 +32,7 @@ export function MobileMenu() {
                 </C.LinkText>
               </Link>
 
-              <Link to="/about-me">
+              <Link className="nav-item" to="/about-me">
                 <C.Selected  selected={ location === "/about-me" } />
 
                 <C.LinkText selected={ location === "/about-me" }>
@@ -39,7 +40,7 @@ export function MobileMenu() {
                 </C.LinkText>
               </Link>
 
-              <Link className="last" to="/projects">
+              <Link className="last nav-item" to="/projects">
                 <C.Selected  selected={ location === "/projects" } />
 
                 <C.LinkText selected={ location === "/projects" }>
@@ -47,7 +48,7 @@ export function MobileMenu() {
                 </C.LinkText>
               </Link>
 
-              <Link to="/contact-me">
+              <Link className="nav-item" to="/contact-me">
                 <C.Selected  selected={ location === "/contact-me" } />
                 
                 <C.LinkText selected={ location === "/contact-me" }>
@@ -57,6 +58,8 @@ export function MobileMenu() {
             </C.NavItems>
           </C.OpenedMenu>
         }
+
+        { openMenu && <Footer /> }
       </C.Menu>
   );
 }

@@ -9,7 +9,7 @@ const GlobalStyles = createGlobalStyle`
     padding: 0;
     font-family: 'Fira Code', monospace;
     background-color: #011627;
-    color: #E5E9F0;
+    // color: #E5E9F0;
     text-decoration: none;
   }
   

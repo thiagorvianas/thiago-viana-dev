@@ -1,11 +1,13 @@
 import { Link, useLocation } from 'react-router-dom';
 import logoFundoBranco from '../../../images/logo-fundo-branco.png';
 import * as C from './styles';
+import { Footer } from '../../Footer';
 
 export function DesktopMenu() {
   const location = useLocation().pathname;
 
   return (
+    <>
       <C.Menu>
         <C.Before>
           <C.Logo src={ logoFundoBranco } alt="Logotipo Thiago Viana Dev" />
@@ -47,5 +49,8 @@ export function DesktopMenu() {
           </Link>
         </C.ContactMe>
       </C.Menu>
+
+      <Footer />
+    </>
   );
 }

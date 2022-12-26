@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Menu = styled.nav`
     display: flex;
@@ -9,7 +9,7 @@ export const Menu = styled.nav`
     text-align: left;
     width: 100%;
 
-    a {
+    .nav-item {
         align-items: center;
         display: flex;
         height: 100%;
@@ -25,8 +25,11 @@ export const OpenedMenu = styled.div`
     left: 0;
     index: 1;
     width: 100vw;
+    height: 90%;
     transition: all 0.3s linear;
     border-top: 1px solid #1E2D3D;
+    border-left: 1px solid #1E2D3D;
+    border-right: 1px solid #1E2D3D;
 `;
 
 export const Before = styled.div`
@@ -44,8 +47,7 @@ export const Logo = styled.img`
 export const NavItems = styled.div`
     display: flex;
     flex-direction: column;
-    border-left: 1px solid #1E2D3D;
-    border-right: 1px solid #1E2D3D;
+    
 `;
 
 export const ContactMe = styled.div``;

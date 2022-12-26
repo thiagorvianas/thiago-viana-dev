@@ -1,5 +1,5 @@
-import { Main } from './routes';
 import GlobalStyles from './Global.styles';
+import { Main } from './routes';
 import { Header } from './components/Header';
 
 function App() {
