@@ -5,11 +5,7 @@ export const Container = styled.header`
     align-items: center;
     border-bottom: 1px solid #1E2D3D;
     height: 62px;
-`;
-
-export const Logo = styled.img`
-    width: 180px;
-    margin: 0 100px;
+    justify-content: space-between;
 `;
 
 export const Menu = styled.nav`
@@ -19,6 +15,8 @@ export const Menu = styled.nav`
     line-height: 21px;
     letter-spacing: 0em;
     text-align: left;
+    width: 100%;
+    justify-content: space-between;
 
     a {
         padding: 20px;
@@ -27,6 +25,26 @@ export const Menu = styled.nav`
     }
 `;
 
-export const ContactMe = styled.div`
-
+export const NavItems = styled.div`
+    .last {
+        border-right: 1px solid #1E2D3D;
+    }
 `;
+
+export const ContactMe = styled.div``;
+
+export const BurgerMenu = styled.div`
+    display: flex;
+    flex-direction: column;
+`;
+
+export const Icon = styled.div`
+    width: 18px;
+    height: 2px;
+    margin: 2px;
+    background: #607B96;
+`;
+
+// @media (max-width: 1023px) {
+//     width: 100px;
+//   }
