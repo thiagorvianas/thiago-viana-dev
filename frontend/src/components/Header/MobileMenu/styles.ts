@@ -37,7 +37,7 @@ export const Before = styled.div`
 `;
 
 export const Logo = styled.img`
-    width: 40%;
+    width: 140px;
     margin-left: 20px;
 `;
 
