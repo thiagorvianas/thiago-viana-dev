@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
   * {
@@ -8,8 +8,12 @@ const GlobalStyles = createGlobalStyle`
     outline: none;
     padding: 0;
     font-family: 'Fira Code', monospace;
-    background-color: #011627;
     text-decoration: none;
+    overflow: hidden;
+
+    @media (max-width: 1023px) {
+      overflow: auto;
+    }
   }
   
   @font-face {
@@ -17,10 +21,13 @@ const GlobalStyles = createGlobalStyle`
   }
   
   :root {
-    border: 1px solid #1E2D3D;
-    min-height: 100vh;
     font-size: 18px;
+    background-color: #011627;
   }
+`;
+
+export const ViewPort = styled.section`
+  height: 100vh;
 `;
 
 export default GlobalStyles;

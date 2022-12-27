@@ -4,8 +4,4 @@ type props = {
   text: string;
 }
 
-export function Comment ({ text }: props) {
-  return(
-    <C.CommentItems>{'// '}{ text }</C.CommentItems>
-  );
-}
+export const SingleLineComment = ({ text }: props) => (<C.CommentItems>{'// '}{ text }</C.CommentItems>);

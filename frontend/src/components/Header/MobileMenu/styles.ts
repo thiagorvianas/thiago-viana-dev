@@ -23,6 +23,7 @@ export const OpenedMenu = styled.div`
     flex-direction: column;
     top: 62px;
     left: 0;
+    background-color: #011627;
     index: 1;
     width: 100vw;
     height: 90%;

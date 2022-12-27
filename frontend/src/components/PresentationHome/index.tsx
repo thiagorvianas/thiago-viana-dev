@@ -1,6 +1,7 @@
 import * as C from './styles';
-import { Comment } from '../Codes/Comment';
+import { SingleLineComment } from '../Codes/Comment';
 import { Const } from '../Codes/Const';
+import useWindowDimensions from '../../utils/UseWindowDimentions';
 
 export function PresentationHome () {
   return (
@@ -15,8 +16,8 @@ export function PresentationHome () {
           </C.Hello>
 
           <C.Links>
-            <Comment text="complete the game to continue" />
-            <Comment text="you can also see it on my Github page or Linkedin" />
+            { useWindowDimensions().width >= 1023 && <SingleLineComment text="complete the game to continue" />}
+            <SingleLineComment text="you can also see it on my Github page or Linkedin" />
             
             <Const constName="githubLink" constString="https://linkedin.com/in/thiagovianadev/" />
             <Const constName="linkedinLink" constString="https://linkedin.com/in/thiagovianadev/" />
