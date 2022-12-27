@@ -1,4 +1,6 @@
 import * as C from './styles';
+import { Comment } from '../Codes/Comment';
+import { Const } from '../Codes/Const';
 
 export function PresentationHome () {
   return (
@@ -13,7 +15,11 @@ export function PresentationHome () {
           </C.Hello>
 
           <C.Links>
-
+            <Comment text="complete the game to continue" />
+            <Comment text="you can also see it on my Github page or Linkedin" />
+            
+            <Const constName="githubLink" constString="https://linkedin.com/in/thiagovianadev/" />
+            <Const constName="linkedinLink" constString="https://linkedin.com/in/thiagovianadev/" />
           </C.Links>
         </C.TextContent>
 
