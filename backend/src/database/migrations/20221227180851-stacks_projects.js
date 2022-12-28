@@ -4,21 +4,27 @@
 module.exports = {
   async up (queryInterface, Sequelize) {
     await queryInterface.createTable('stacks_projects', {
-      id: {
-        primaryKey: true,
-        allowNull: false,
-        autoIncrement: true,
-        type: Sequelize.INTEGER,
-      },
       projectId: {
-        allowNull: false,
+        type: Sequelize.INTEGER,
         field: 'project_id',
-        type: Sequelize.STRING,
+        references: {
+          model: 'projects',
+          key: 'id'
+        },
+        onUpdate: 'CASCADE',
+        onDelete: 'CASCADE',
+        primaryKey: true,
       },
       stackId: {
-        allowNull: false,
-        field: 'stack_id',
         type: Sequelize.INTEGER,
+        field: 'stack_id',
+        references: {
+          model: 'stacks',
+          key: 'id'
+        },
+        onUpdate: 'CASCADE',
+        onDelete: 'CASCADE',
+        primaryKey: true,
       },
     });
   },

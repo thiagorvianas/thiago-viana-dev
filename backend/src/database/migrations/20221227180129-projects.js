@@ -22,6 +22,12 @@ module.exports = {
         allowNull: false,
         field: 'image_id',
         type: Sequelize.INTEGER,
+        onUpdate: 'CASCADE',
+        onDelete: 'CASCADE',
+        references: {
+          model: 'images',
+          key: 'id'
+        }
       },
     });
   },
