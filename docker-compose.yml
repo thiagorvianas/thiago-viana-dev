@@ -1,7 +1,6 @@
 version: '3.9'
 services:
   frontend:
-    container_name: app_frontend
     build: ./frontend
     ports:
       - 3000:3000
@@ -22,18 +21,17 @@ services:
     ports:
       - 3001:3001
     platform: linux/x86_64
-    working_dir: /backend
+    working_dir: /app-backend
     depends_on:
       db:
         condition: service_healthy
     environment:
       - APP_PORT=3001
-      - JWT_SECRET=jwt_secret
       # Os dados abaixo se referem ao container `db`
       # Dica: Relembre aqui da comunicação interna entre containers
       - DB_USER=root
       - DB_PASS=123456
-      - DB_HOST=db
+      - DB_HOSTNAME=localhost
       - DB_PORT=3306
     healthcheck:
       test: ["CMD", "lsof", "-t", "-i:3001"] # Caso utilize outra porta interna para o back, altere ela aqui também

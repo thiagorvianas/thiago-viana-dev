@@ -3,10 +3,12 @@
     "version": "1.0.0",
     "main": "src/server.js",
     "scripts": {
+        "build": "/bin/sh tsc_eval.sh",
         "test": "echo \"Error: no test specified\" && exit 1",
         "debug": "nodemon src/server.js",
         "dev": "nodemon --watch \"./src/**\" ./src/server.ts",
-        "db:reset": "npx -y tsc && npx sequelize-cli db:drop && npx sequelize-cli db:create"
+        "db:reset": "npx -y tsc && npx sequelize-cli db:drop && npx sequelize-cli db:create",
+        "prestart": "npm run build && npm run db:reset"
     },
     "keywords": [],
     "author": "",
@@ -14,11 +16,12 @@
     "devDependencies": {
         "@tsconfig/node16": "^1.0.3",
         "@types/node": "^18.11.8",
+        "@types/uuid": "^9.0.0",
         "mysql2": "^2.3.3",
+        "sequelize-cli": "^6.5.2",
         "sinon": "13.0.1",
         "ts-node": "10.7.0",
-        "ts-node-dev": "1.1.8",
-        "sequelize-cli": "^6.5.2"
+        "ts-node-dev": "1.1.8"
     },
     "description": "",
     "dependencies": {
@@ -27,8 +30,10 @@
         "@types/sequelize": "^4.28.14",
         "dotenv": "^16.0.3",
         "express": "^4.18.2",
+        "firebase": "^9.15.0",
         "nodemon": "^2.0.20",
         "readline-sync": "^1.4.10",
-        "sequelize": "^6.25.3"
+        "sequelize": "^6.25.3",
+        "uuid": "^9.0.0"
     }
 }
