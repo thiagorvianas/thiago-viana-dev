@@ -14,7 +14,7 @@ export const Container = styled.header`
     justify-content: space-between;
     font-size: 16px;
     color: #607B96;
-    // background-color: #011627;
+    background-color: #011627;
 `;
 
 export const FindMe = styled.div`

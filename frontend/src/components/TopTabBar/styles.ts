@@ -2,10 +2,12 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
     display: flex;
-    align-items: center;
+    // align-items: center;
     font-size: 16px;
     color: #607B96;
     border-bottom: 1px solid #1E2D3D;
+    height: 46px;
+    width: 100%;
 `;
 
 export const Tab = styled.div`

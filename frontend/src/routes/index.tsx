@@ -7,7 +7,8 @@ export function Main() {
   return (
     <Routes>
       <Route path="/" element={ <Hello /> } />
-      <Route path="/about-me" element={ <AboutMe /> } />
+      <Route path="/about-me" element={ <AboutMe /> }>
+      </Route>
     </Routes>
   );
 }
