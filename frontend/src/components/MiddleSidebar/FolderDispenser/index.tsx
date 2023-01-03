@@ -7,7 +7,7 @@ import { RiFolder3Fill } from 'react-icons/ri';
 type props = {
   folderTitle: string;
   color: string;
-  items: JSX.Element;
+  items: JSX.Element | JSX.Element[];
 }
 
 export const FolderDispenser = ({ folderTitle, color, items }: props) => {

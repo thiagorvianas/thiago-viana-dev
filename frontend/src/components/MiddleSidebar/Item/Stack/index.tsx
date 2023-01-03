@@ -1,17 +1,16 @@
-import { useState } from 'react';
 import * as C from './styles';
-import { RiArchiveFill } from 'react-icons/ri';
 
 type props = {
   ItemTitle: string;
+  stackIcon: JSX.Element;
 }
 
-export const Item = ({ ItemTitle }: props) => {
+export const StackItem = ({ ItemTitle, stackIcon }: props) => {
   return(
     <C.Container>
       <C.Item>
         <C.ItemIcon>
-          <RiArchiveFill />
+          { stackIcon }
         </C.ItemIcon>
 
         <C.ItemText>

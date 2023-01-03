@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import * as C from './styles';
 
 import { MiddleSidebar } from '../../../components/MiddleSidebar';
@@ -8,6 +9,7 @@ import { TopTabBar } from '../../../components/TopTabBar';
 import { Contacts } from '../../../components/Contacts';
 
 export const HobbiesInfo = () => {
+  const [folder, setFolder] = useState('');
 
   return(
     <C.Container>
@@ -32,7 +34,10 @@ export const HobbiesInfo = () => {
         </>
       } />
 
-      <TopTabBar tabTitle="hobbies-info" />
+      <C.Content>
+        <TopTabBar tabTitle="hobbies-info" titleDefault="hobbies-info" close={ setFolder } />
+        Content
+      </C.Content>
     </C.Container>
   );    
 };

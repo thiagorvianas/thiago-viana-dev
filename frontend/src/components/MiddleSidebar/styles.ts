@@ -6,5 +6,5 @@ export const Container = styled.div`
     font-size: 16px;
     color: #607B96;
     border-right: 1px solid #1E2D3D;
-    width: 300px;
+    width: 350px;
 `;

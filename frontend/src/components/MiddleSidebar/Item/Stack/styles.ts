@@ -11,15 +11,13 @@ export const Item = styled.div`
     display: flex;
     align-items: center;
     padding: 5px 15px;
-
-    :hover {
-        cursor: pointer;
-    }
+    color: #607B96;
 `;
 
 export const ItemIcon = styled.div`
     display: flex;
     background: none;
+    color: #81A1C1;
     margin-right: 5px;
 `;
 

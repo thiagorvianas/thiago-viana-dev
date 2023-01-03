@@ -13,3 +13,9 @@ export const Items = styled.div`
     padding: 10px 0;
     border-bottom: 1px solid #1E2D3D;
 `;
+
+export const Content = styled.div`
+    border-right: 1px solid #1E2D3D;
+    width: 100%;
+    height: 100%;
+`;
