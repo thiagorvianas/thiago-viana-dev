@@ -20,10 +20,12 @@ export const Item = styled.div`
 export const ItemIcon = styled.div`
     display: flex;
     background: none;
-    margin-right: 5px;
+    // margin-right: 5px;
+    min-width: 20px;
 `;
 
 export const ItemText = styled.p`
     margin-right: 15px;
+    text-overflow: ellipsis;
 `;
 

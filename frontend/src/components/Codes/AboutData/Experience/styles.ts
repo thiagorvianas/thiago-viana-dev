@@ -1,18 +1,5 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
-    display: flex;
-    height: 100%;
-    padding: 30px 50px;
-`;
-
-export const Content = styled.div`
-    margin-left: 15px;
-    line-height: 25px;
-`;
-
-export const Counter = styled.div``;
-
 export const Line = styled.div`
     display: flex;
 `;

@@ -28,6 +28,10 @@ const GlobalStyles = createGlobalStyle`
 
 export const ViewPort = styled.section`
   height: 100vh;
+
+  @media (max-width: 1023px) {
+    height: auto;
+  }
 `;
 
 export default GlobalStyles;

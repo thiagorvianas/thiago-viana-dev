@@ -1,20 +1,14 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import * as C from './styles';
 import { MdArrowDropDown, MdArrowRight } from 'react-icons/md';
-import useWindowDimensions from '../../../utils/UseWindowDimentions';
 
 type props = {
   dispenserTitle: string;
   items: JSX.Element;
-  setOpen(status: boolean): void;
 }
 
-export const ItemDispenser = ({ dispenserTitle, items, setOpen }: props) => {
-  const [openItem, setOpenItem] = useState(useWindowDimensions().width >= 1023);
-
-  useEffect(() => {
-    setOpen(openItem);
-  }, [openItem]);
+export const MobileGeralDispenser = ({ dispenserTitle, items }: props) => {
+  const [openItem, setOpenItem] = useState(false);
 
   return(
     <C.Container>

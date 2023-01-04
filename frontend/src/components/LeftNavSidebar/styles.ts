@@ -13,6 +13,10 @@ export const Container = styled.div`
 
 export const NavSidebar = styled.nav`
     padding: 15px 0;
+
+    @media (max-width: 1023px) {
+        width: 100%;
+    }
 `;
 
 export const NavItem = styled.div<{selected: boolean}>`

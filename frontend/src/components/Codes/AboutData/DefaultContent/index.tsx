@@ -1,4 +1,5 @@
 import * as C from './styles';
+import useWindowDimensions from '../../../../utils/UseWindowDimentions';
 
 export const DefaultContent = () => {  
   return(
@@ -17,7 +18,8 @@ export const DefaultContent = () => {
         </C.Line>
 
         <C.Line>
-          <p>* Learn more about me by browsing the archives on the left.</p>
+          <p>* Learn more about me by browsing {
+            useWindowDimensions().width >= 1023 ? 'the archives on the left.' : 'in this archives.'}</p>
         </C.Line>
             
         <C.Line>

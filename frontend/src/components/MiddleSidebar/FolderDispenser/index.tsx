@@ -3,6 +3,7 @@ import * as C from './styles';
 
 import { MdOutlineKeyboardArrowDown, MdOutlineKeyboardArrowRight } from 'react-icons/md';
 import { RiFolder3Fill } from 'react-icons/ri';
+import useWindowDimensions from '../../../utils/UseWindowDimentions';
 
 type props = {
   folderTitle: string;
@@ -11,7 +12,7 @@ type props = {
 }
 
 export const FolderDispenser = ({ folderTitle, color, items }: props) => {
-  const [openItem, setOpenItem] = useState(false);
+  const [openItem, setOpenItem] = useState(useWindowDimensions().width >= 1023);
 
   return(
     <C.Container>

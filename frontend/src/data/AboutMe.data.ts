@@ -1,12 +1,12 @@
 export const experiences = [
     {
         id: 1,
-        title: 'Art Director',
-        company: 'Xpert Lançamentos',
-        modality: 'Full Time',
-        start: 'September, 2020',
+        title: 'art director',
+        company: 'xpert lançamentos',
+        modality: 'full time',
+        start: 'september, 2020',
         workingNow: false,
-        end: 'April, 2021',
+        end: 'april, 2021',
         attributes: [
         'Led the audiovisual team in infoproduct launches and digital marketing management.'
         ],
@@ -26,12 +26,12 @@ export const experiences = [
     },
     {
         id: 2,
-        title: 'FullStack Designer',
-        company: 'DATAmérica',
-        modality: 'Part Time',
-        start: 'August, 2021',
+        title: 'fullStack designer',
+        company: 'datamérica',
+        modality: 'part time',
+        start: 'august, 2021',
         workingNow: true,
-        end: 'Now',
+        end: 'now',
         attributes: [
         'Integrated the marketing team in the creation of strategies, visual identities, web applications and advertisements.',
         'FrontEnd development using JavaScript, CSS, Styled Components and React.'
@@ -68,18 +68,49 @@ export const bioData = [
 export const educationData = [
     {
         id: 1,
-        title: 'Marketing Management',
-        type: 'Higher Technology Course',
-        institution: 'PUC MG',
-        start: 'August, 2021',
-        end: 'June, 2023'
+        title: 'marketing management',
+        type: 'higher technology course',
+        institution: 'puc mg',
+        start: 'august, 2021',
+        end: 'june, 2023'
     },
     {
         id: 2,
-        title: 'Web Development',
-        type: 'Course',
-        institution: 'Trybe',
-        start: 'March, 2022',
-        end: 'March, 2023'
+        title: 'web development',
+        type: 'course',
+        institution: 'trybe',
+        start: 'march, 2022',
+        end: 'march, 2023'
     }
+]
+
+export const certificatesData = [
+    {
+        id: 1,
+        title: 'certification in leadership, learning and resilience (malala and karnal)',
+        institution: 'puc rs',
+        emission: 'august, 2021',
+        link: 'https://certificado.pucrs.br/9af43184-6dd8-4ebc-a497-34a427aa0c0a#gs.mh3dwu',
+    },
+    {
+        id: 2,
+        title: 'introductory javascript course',
+        institution: 'trybe',
+        emission: 'february, 2022',
+        link: 'https://smartcerts.co/certificate/kyqrzwkj',
+    },
+    {
+        id: 3,
+        title: 'web development fundamentals module',
+        institution: 'trybe',
+        emission: 'june, 2022',
+        link: 'https://www.credential.net/15101742-f0de-4606-a671-42d1f62cb61e',
+    },
+    {
+        id: 4,
+        title: 'Module - Front End',
+        institution: 'trybe',
+        emission: 'september, 2022',
+        link: 'https://www.credential.net/30f9f1b9-36af-46ab-8ca7-5b1b366b789f',
+    },
 ]

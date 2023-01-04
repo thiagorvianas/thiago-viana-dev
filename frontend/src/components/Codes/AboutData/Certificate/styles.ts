@@ -2,6 +2,11 @@ import styled from 'styled-components';
 
 export const Line = styled.div`
     display: flex;
+
+    a {
+        color: #607B96;
+        text-decoration: underline;
+    }
 `;
 
 export const Number = styled.div`
@@ -10,7 +15,7 @@ export const Number = styled.div`
     line-height: 25px;
 `;
 
-export const Data = styled.div`
+export const DataCertificate = styled.div`
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;

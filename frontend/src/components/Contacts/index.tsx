@@ -2,11 +2,15 @@ import * as C from './styles';
 
 import { ItemDispenser } from '../MiddleSidebar/ItemDispenser'
 import { ContactItem } from './Item';
+import { useState } from 'react';
 
-export function Contacts() {    
+export function Contacts() {  
+  const [open, setOpen] = useState(false);
+  
   return(
     <ItemDispenser
       dispenserTitle="contacts"
+      setOpen={ setOpen }
         items={
           <C.Items>
             <ContactItem type="email" ItemTitle="trodrigo@gmail.com"/>

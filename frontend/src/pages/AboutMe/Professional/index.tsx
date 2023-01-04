@@ -1,11 +1,11 @@
 import * as C from './styles';
 
-import { DiJavascript1, DiReact } from 'react-icons/di';
+import { DiJavascript1, DiReact, DiGithubBadge, DiGit } from 'react-icons/di';
 import { GrMysql } from 'react-icons/gr';
 import { SiCss3, SiDocker, SiHtml5, SiMongodb, SiRedux } from 'react-icons/si';
 import { TbApi } from 'react-icons/tb';
-
-import { useState } from 'react';
+import useWindowDimensions from '../../../utils/UseWindowDimentions';
+import { useState, useEffect } from 'react';
 import { DefaultContent } from '../../../components/Codes/AboutData/DefaultContent';
 import { ExperienceData } from '../../../components/Codes/AboutData/Experience';
 import { Contacts } from '../../../components/Contacts';
@@ -19,8 +19,13 @@ import { experiences } from '../../../data/AboutMe.data';
 import { LineNumbers } from '../../../utils/LineNumbers';
 
 export const ProfessionalInfo = () => {
-  const [folder, setFolder] = useState('');
-  const [xpId, setXpId] = useState(1000);
+  const [folder, setFolder] = useState('professional-info');
+  const [dataId, setDataId] = useState(1000);
+  const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    folder === 'professional-info' && setDataId(1000);
+  }, [folder]);
 
   return(
     <C.Container>
@@ -28,6 +33,7 @@ export const ProfessionalInfo = () => {
         <>
           <ItemDispenser
             dispenserTitle="professional-info"
+            setOpen={ setOpen }
             items={
               <C.Items> 
                 <FolderDispenser
@@ -37,9 +43,10 @@ export const ProfessionalInfo = () => {
                     experiences.map((item) => (
                       <C.HandleItem
                         onClick={ () => {
-                          setXpId(item.id - 1);
+                          setDataId(item.id - 1);
+                          setFolder('experiences');
                         }}
-                        selected={xpId === (item.id - 1)}
+                        selected={dataId === (item.id - 1)}
                       >
                         <Item ItemTitle={item.title} />
                       </C.HandleItem>
@@ -61,6 +68,8 @@ export const ProfessionalInfo = () => {
                       <StackItem ItemTitle="css" stackIcon={ <SiCss3 /> } />
                       <StackItem ItemTitle="mySql" stackIcon={ <GrMysql /> } />
                       <StackItem ItemTitle="mongoDb" stackIcon={ <SiMongodb /> } />
+                      <StackItem ItemTitle="git" stackIcon={ <DiGit /> } />
+                      <StackItem ItemTitle="gitHub" stackIcon={ <DiGithubBadge /> } />
                     </>
                   }
                 />
@@ -68,25 +77,39 @@ export const ProfessionalInfo = () => {
             } 
           />
           
-          <Contacts />
+          { useWindowDimensions().width >= 1023 && <Contacts />}
         </>
       } />
 
-      <C.Content>
-        <TopTabBar tabTitle="professional-info" titleDefault="professional-info" close={ setFolder } />
+        <C.Content>
+          { useWindowDimensions().width >= 1023 &&
+            <TopTabBar tabTitle={ folder } titleDefault="professional-info" close={ setFolder } /> }
 
-        <C.DataContainer>        
-          <C.Counter>
-            { LineNumbers.map((item) => (
-              <C.Number>{ item }</C.Number>
-            )) }
-          </C.Counter>
+          <C.DataContainer open={open}>        
+            { useWindowDimensions().width >= 1023 &&
+              <C.Counter>
+                { LineNumbers.map((item) => (
+                  <C.Number>{ item }</C.Number>
+                )) }
+              </C.Counter> }
 
-          <C.DataContent>
-            { xpId === 1000 ? <DefaultContent /> : <ExperienceData data={ experiences[xpId] } />}
-          </C.DataContent>
-        </C.DataContainer>
-      </C.Content>
+            { useWindowDimensions().width < 1023 ?
+            ( open && 
+              <C.DataContent>
+                { 
+                  dataId === 1000 ?
+                  <DefaultContent /> : <ExperienceData data={ experiences[dataId] } />
+                }
+              </C.DataContent>
+            ) :
+              <C.DataContent>
+                { 
+                  dataId === 1000 ?
+                  <DefaultContent /> : <ExperienceData data={ experiences[dataId] } />
+                }
+              </C.DataContent> }
+          </C.DataContainer>
+        </C.Content> 
     </C.Container>
   );    
 };

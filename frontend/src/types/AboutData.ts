@@ -23,3 +23,10 @@ export type Education = {
     start: string;
     end: string;
 }
+
+export type Certificates = {
+    id: number;
+    title: string;
+    institution: string;
+    link: string;
+}

@@ -5,13 +5,10 @@ export const Container = styled.div`
     flex-direction: column;
     justify-content: center;
     font-size: 16px;
-    width: 300px;
-
-    @media (max-width: 1023px) {
-        width: 100%;
-        border: none;
-        overflow: hidden;
-    }
+    width: 100%;
+    border-right: 1px solid #1E2D3D;
+    // margin-bottom: 10px;
+    overflow: hidden;
 `;
 
 export const Dispenser = styled.div`
@@ -20,16 +17,12 @@ export const Dispenser = styled.div`
     padding: 10px 15px;
     color: #FFFFFF;
     border-bottom: 1px solid #1E2D3D;
-    user-select: none;
-
-    @media (max-width: 1023px) {
-        background-color: #1E2D3D;
-        margin-bottom: 5px;
-        padding: 0 15px;
-        width: 100%;
-        overflow: hidden;
-        min-height: 50px;
-    }
+    border-left: 1px solid #1E2D3D;
+    border-right: 1px solid #1E2D3D;
+    background-color: #1E2D3D;
+    margin-bottom: 5px;
+    width: 100%;
+    overflow: hidden;
 
     :hover {
         cursor: pointer;
@@ -49,10 +42,4 @@ export const Items = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-
-    @media (max-width: 1023px) {
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-    }
 `;

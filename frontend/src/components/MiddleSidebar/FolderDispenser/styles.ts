@@ -4,6 +4,8 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     font-size: 16px;
+    user-select: none;
+
 `;
 
 export const Folder = styled.div<{selected: boolean}>`
