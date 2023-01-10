@@ -48,7 +48,6 @@ export const Logo = styled.img`
 export const NavItems = styled.div`
     display: flex;
     flex-direction: column;
-    
 `;
 
 export const ContactMe = styled.div``;
@@ -71,6 +70,7 @@ export const BurgerMenu = styled.div<{ openMenu: boolean }>`
     margin-right: 20px;
     transition: all 0.3s linear;
     z-index: 20;
+    overflow: hidden;
 
     :hover {
         cursor: pointer;
