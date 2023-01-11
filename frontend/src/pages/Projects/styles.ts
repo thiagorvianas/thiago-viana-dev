@@ -11,6 +11,15 @@ export const Container = styled.div`
     }
 `;
 
+export const Title = styled.div`
+    color: #ffffff;
+    padding: 20px 0px 25px 20px;
+    border-left: 1px solid #1E2D3D;
+    border-right: 1px solid #1E2D3D;
+    border-bottom: 1px solid #1E2D3D;
+    overflow: hidden;
+`;
+
 export const ProjectTitle = styled.div`
     color: #607B96;
     font-size: 16px;

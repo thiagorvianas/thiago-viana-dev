@@ -7,6 +7,8 @@ import useWindowDimensions from '../../utils/UseWindowDimentions';
 import { ContactForm } from '../../components/ContactForm';
 import { ContactCode } from '../../components/Codes/ContactCode';
 import { FormData } from '../../types/FormData';
+import { MessageAccepted } from '../../components/MessageAccepted';
+
 
 const initialValue = { 
   name: '',
@@ -20,6 +22,12 @@ export const ContactMe = () => {
 
   return(
     <C.Container>
+      { useWindowDimensions().width < 1023 &&
+        <C.Title>
+          <p>_contact-me</p>
+        </C.Title>
+      }
+
       <MiddleSidebar items={
         <Contacts />
       } />
@@ -31,8 +39,9 @@ export const ContactMe = () => {
 
         <C.Form>
           <ContactForm setFormData={ setFormData } />
+          {/* <MessageAccepted /> */}
 
-          <ContactCode data={ formData } />
+          { useWindowDimensions().width >= 1023 && <ContactCode data={ formData } /> }
         </C.Form>
       </C.Content >
     </C.Container>

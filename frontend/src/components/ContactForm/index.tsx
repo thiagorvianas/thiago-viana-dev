@@ -42,6 +42,10 @@ export const ContactForm = ({ setFormData }: props) => {
       
         <C.Message onChange={ (e) => setMessage(e.target.value) } />
       </C.Label>
+
+      <C.FinalContent>
+        <C.SubmitBtn>submit-message</C.SubmitBtn>
+      </C.FinalContent>
     </C.Form>
   );    
 };

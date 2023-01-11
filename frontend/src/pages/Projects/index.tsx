@@ -32,6 +32,12 @@ export const Projects = () => {
   
   return(
     <C.Container>
+      { useWindowDimensions().width < 1023 &&
+        <C.Title>
+          <p>_projects</p>
+        </C.Title>
+      }
+
       <MiddleSidebar items={
         <ItemDispenser
           dispenserTitle="projects"

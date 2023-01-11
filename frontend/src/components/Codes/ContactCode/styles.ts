@@ -2,9 +2,11 @@ import styled from 'styled-components';
 
 export const DataContainer = styled.div<{open: boolean}>`
     display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100%;
-    padding: 30px 75px;
     border-left: 1px solid #1E2D3D;
+    width: 100%;
     
     @media (max-width: 1023px) {
         display: flex;

@@ -3,8 +3,10 @@ import styled from 'styled-components';
 export const Form = styled.form`
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     color: #465E77;
-    padding: 150px;
+    min-width: 40vw;
 
     @media (max-width: 1023px) {
         flex-direction: column;
@@ -17,6 +19,7 @@ export const Label = styled.label`
     display: flex;
     flex-direction: column;
     margin-bottom: 25px;
+    min-width: 380px;
 `;
 
 export const Title = styled.p`
@@ -48,4 +51,21 @@ export const Message = styled.textarea`
     padding: 15px;
     color: #465E77;
     font-size: 16px;
+`;
+
+export const FinalContent = styled.div`
+    display: flex;
+    width: 372px;
+`;
+
+export const SubmitBtn = styled.button`
+    background: #1C2B3A;
+    border-radius: 8px;
+    color: #FFFFFF;
+    padding: 12px;
+    cursor: pointer;
+    
+    :hover {
+        opacity: 90%;
+    }
 `;
