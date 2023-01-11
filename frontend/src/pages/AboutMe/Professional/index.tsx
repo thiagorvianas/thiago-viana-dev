@@ -83,7 +83,8 @@ export const ProfessionalInfo = () => {
 
         <C.Content>
           { useWindowDimensions().width >= 1023 &&
-            <TopTabBar tabTitle={ folder } titleDefault="professional-info" close={ setFolder } /> }
+            <TopTabBar tabTitle={ folder } titleDefault="professional-info" close={ setFolder } />
+          }
 
           <C.DataContainer open={open}>        
             { useWindowDimensions().width >= 1023 &&
