@@ -14,20 +14,21 @@ module.exports = {
         allowNull: false,
         type: Sequelize.STRING,
       },
+      description: {
+        allowNull: false,
+        type: Sequelize.STRING,
+      },
+      image: {
+        allowNull: false,
+        type: Sequelize.STRING,
+      },
       link: {
         allowNull: false,
         type: Sequelize.STRING,
       },
-      imageId: {
+      stacks: {
         allowNull: false,
-        field: 'image_id',
-        type: Sequelize.INTEGER,
-        onUpdate: 'CASCADE',
-        onDelete: 'CASCADE',
-        references: {
-          model: 'images',
-          key: 'id'
-        }
+        type: Sequelize.STRING,
       },
     });
   },

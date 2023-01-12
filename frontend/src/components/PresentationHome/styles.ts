@@ -68,10 +68,14 @@ export const Content = styled.div`
 
 export const TextContent = styled.div``;
 
-export const GameContent = styled.div`
+export const GameContent = styled.div<{image: string}>`
     width: 510px;
-    height: 475px;
-    
+    height: 510px;
+    border-radius: 100%;
+    background-image: url('${(props) => props.image}');
+    background-size: contain;
+    background-position: center;
+ 
     @media (max-width: 1023px) {
         height: 0;
         width: 0;

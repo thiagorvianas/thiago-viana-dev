@@ -51,10 +51,10 @@ export const ViewProject = styled.a`
     color: white;
     padding: 7px 14px;
     border-radius: 10px;
-    background-color: #1C2B3A;
+    background: #1C2B3A;
     width: 150px;
 
     :hover {
-        opacity: 90%;
+        background: #263b50;
     }
 `;

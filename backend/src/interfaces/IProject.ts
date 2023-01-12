@@ -3,10 +3,7 @@ import IStack from './IStack';
 export default interface IProject {
     id: number;
     title: string;
+    description: string;
     link: string;
-    image?: {
-        name: string;
-        link: string;
-    };
-    stacks?: IStack[];
+    stacks: IStack[] | string;
 };

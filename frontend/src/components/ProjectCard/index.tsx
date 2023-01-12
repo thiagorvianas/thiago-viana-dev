@@ -11,7 +11,7 @@ export const CardProject = ({ data }: props) => {
     <C.Card>
       <C.Cover image={ data.image }>
         <C.Stacks>
-          { data.stacks.map((item) => <Stack key={ item } icon={ item } />) }
+          { (data.stacks as string[]).map((item) => <Stack key={ item } icon={ item } />) }
         </C.Stacks>
       </C.Cover>
 

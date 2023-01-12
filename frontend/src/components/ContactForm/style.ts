@@ -11,7 +11,8 @@ export const Form = styled.form`
     @media (max-width: 1023px) {
         flex-direction: column;
         width: 100%;
-        margin-bottom: 20px;
+        margin-bottom: 50px;
+        min-width: 0;
     }
 `;
 
@@ -20,6 +21,10 @@ export const Label = styled.label`
     flex-direction: column;
     margin-bottom: 25px;
     min-width: 380px;
+
+    @media (max-width: 1023px) {
+        min-width: 0;
+    }
 `;
 
 export const Title = styled.p`
@@ -39,6 +44,11 @@ export const ShortText = styled.input`
     &:focus {
         border: 1px solid #607B96;
     }
+
+    @media (max-width: 1023px) {
+        width: 320px;
+        height: 41px;
+    }
 `;
 
 export const Message = styled.textarea`
@@ -51,11 +61,19 @@ export const Message = styled.textarea`
     padding: 15px;
     color: #465E77;
     font-size: 16px;
+
+    @media (max-width: 1023px) {
+        width: 320px;
+    }
 `;
 
 export const FinalContent = styled.div`
     display: flex;
     width: 372px;
+    
+    @media (max-width: 1023px) {
+        width: 320px;
+    }
 `;
 
 export const SubmitBtn = styled.button`
@@ -66,6 +84,6 @@ export const SubmitBtn = styled.button`
     cursor: pointer;
     
     :hover {
-        opacity: 90%;
+        background: #263b50;
     }
 `;

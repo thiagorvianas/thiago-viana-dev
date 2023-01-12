@@ -4,31 +4,62 @@ import { MiddleSidebar } from '../../components/MiddleSidebar';
 import { ItemDispenser } from '../../components/MiddleSidebar/ItemDispenser';
 import { FilterItem } from '../../components/FilterItem';
 import { CardProject } from '../../components/ProjectCard';
-import { projectsData } from '../../data/Projects.data';
 import { stacksData } from '../../data/Projects.data';
 import useWindowDimensions from '../../utils/UseWindowDimentions';
 import { ProjectData } from '../../types/ProjectData';
+import { useApi } from '../../hooks/useApi';
 
 export const Projects = () => {
   const [open, setOpen] = useState(false);
   const [filters, setFilters] = useState([]);
+  const [load, setLoad] = useState(false);
+  const [allProjects, setAllProjects] = useState<ProjectData[]>([]);
   const [projects, setProjects] = useState<ProjectData[]>([]);
+console.log(projects);
 
-  useEffect(() => {
-    const test = filters.map((filter) => {
-      const filtered = projectsData.filter((item: ProjectData) => {
-        return item.stacks.includes(filter);
+  const api = useApi();
+
+  const getProjects = async () => {
+    try {
+      const data = await api.getProjects();
+
+      const adjustedData = data.map((item: ProjectData) => {
+        const stacksList = (item.stacks as string).split(';');
+
+        return { ...item, stacks: stacksList };
+      });
+
+      setAllProjects(adjustedData);
+      setLoad(true);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  const filterProjects= (filtersList: string[]) => {
+    const filteredProjects = filtersList.map((filter) => {
+      const filtered = allProjects.filter(({ stacks }: ProjectData) => {
+
+        return stacks.includes(filter);
       })
       
       return filtered;
     })[0];
 
     if (filters.length !== 0) {
-      setProjects(test);
+      setProjects(filteredProjects);
     } else {
-      setProjects(projectsData);
+      setProjects(allProjects);
     }
-  }, [filters]);
+  };
+
+  useEffect(() => {
+    getProjects();
+  }, []);
+
+  useEffect(() => {
+    filterProjects(filters);
+  }, [filters, allProjects]);
   
   return(
     <C.Container>
@@ -66,7 +97,7 @@ export const Projects = () => {
       ) }
       
       <C.DataContent>
-        { projects.map((project, i) => (
+        { load ? projects.map((project, i) => (
           <C.Project key={ project.id }>
             <C.ProjectTitle>
               <p>
@@ -76,7 +107,7 @@ export const Projects = () => {
 
             <CardProject data={ project } />
           </C.Project>
-        )) }
+        )) : <C.Loading><p>loading...</p></C.Loading> }
       </C.DataContent>
     </C.Container>
   );    

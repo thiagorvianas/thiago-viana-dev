@@ -56,6 +56,20 @@ export const DataContent = styled.div`
     }
 `;
 
+export const Loading = styled.div`
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+
+    p {
+        color: #607B96;
+        font-size: 26px;
+    }
+`;
+
 export const Project = styled.div`
     margin: 30px;
 

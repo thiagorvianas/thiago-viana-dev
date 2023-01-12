@@ -2,6 +2,7 @@ import * as C from './styles';
 import { SingleLineComment } from '../Codes/Comment';
 import { Const } from '../Codes/Const';
 import useWindowDimensions from '../../utils/UseWindowDimentions';
+import photo from '../../images/thiago-photo.png';
 
 export function PresentationHome () {
   return (
@@ -19,12 +20,17 @@ export function PresentationHome () {
             { useWindowDimensions().width >= 1023 && <SingleLineComment text="complete the game to continue" />}
             <SingleLineComment text="you can also see it on my Github page or Linkedin" />
             
-            <Const constName="githubLink" constString="https://linkedin.com/in/thiagovianadev/" />
-            <Const constName="linkedinLink" constString="https://linkedin.com/in/thiagovianadev/" />
+            <a href="https://linkedin.com/in/thiagovianadev/" target="_blank" rel="noreferrer">
+              <Const constName="githubLink" constString="https://linkedin.com/in/thiagovianadev/" />
+            </a>
+
+            <a href="https://linkedin.com/in/thiagovianadev/" target="_blank" rel="noreferrer">
+              <Const constName="linkedinLink" constString="https://linkedin.com/in/thiagovianadev/" />
+            </a>
           </C.Links>
         </C.TextContent>
 
-        <C.GameContent />
+        <C.GameContent image={ photo } />
       </C.Content>
     </C.Container>
   );

@@ -11,7 +11,7 @@ type props = {
 export const Stack = ({ icon }: props) => {
   const stackGenerator = (type: string) => {
     switch (type) {
-      case 'react':
+      case 'react.js':
         return (
           <C.Stack bg="#5ED7F2">
             <DiReact />

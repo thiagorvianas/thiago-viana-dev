@@ -3,8 +3,6 @@ import CertificatesService from './Certificate.service';
 import EducationsService from './Education.service';
 import ExperiencesService from './Experience.service';
 import ProjectsService from './Project.service';
-import StackService from './Stack.service';
-import StacksProjectsService from './StackProject.service';
 
 
 export {
@@ -13,6 +11,4 @@ export {
     EducationsService,
     ExperiencesService,
     ProjectsService,
-    StackService,
-    StacksProjectsService,
 };

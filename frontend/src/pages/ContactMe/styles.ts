@@ -30,7 +30,7 @@ export const Content = styled.div`
         flex-direction: column;
         overflow: hidden;
         height: auto;
-        padding-top: 50px;
+        padding-top: 25px;
     }
 `;
 

@@ -1,13 +1,13 @@
 import { INTEGER, Model, STRING } from 'sequelize';
 import db from '.';
-import Images from './Image.model';
-import StacksProjects from './StackProject.model';
 
 class Projects extends Model {
   declare id: number;
   declare title: string;
+  declare description: string;
+  declare image: string;
   declare link: string;
-  declare imageId: number;
+  declare stacks: string;
 }
 
 Projects.init({
@@ -21,12 +21,20 @@ Projects.init({
     type: STRING,
     allowNull: false,
   },
+  description: {
+    type: STRING,
+    allowNull: false,
+  },
+  image: {
+    type: STRING,
+    allowNull: false,
+  },
   link: {
     type: STRING,
     allowNull: false,
   },
-  imageId: {
-    type: INTEGER,
+  stacks: {
+    type: STRING,
     allowNull: false,
   }
 }, {
@@ -35,8 +43,5 @@ Projects.init({
   modelName: 'projects',
   timestamps: false,
 });
-
-Images.hasOne(Projects, { foreignKey: 'imageId', as: 'image' });
-Projects.belongsTo(Images, { foreignKey: 'id', as: 'image' });
 
 export default Projects;

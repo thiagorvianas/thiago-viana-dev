@@ -42,6 +42,6 @@ export const NewMsgBtn = styled.button`
     cursor: pointer;
     
     :hover {
-        opacity: 90%;
+        background: #263b50;
     }
 `;
