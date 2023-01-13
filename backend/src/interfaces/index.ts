@@ -4,7 +4,7 @@ import IEducation from './IEducation';
 import IExperience from './IExperience';
 import IProject from './IProject';
 import IStack from './IStack';
-import IStackProjects from './IStackProjects';
+import IMessage from './IMessage';
 
 export {
     IBiography,
@@ -13,5 +13,5 @@ export {
     IExperience,
     IProject,
     IStack,
-    IStackProjects,
+    IMessage
 }

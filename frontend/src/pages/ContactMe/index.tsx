@@ -7,8 +7,6 @@ import useWindowDimensions from '../../utils/UseWindowDimentions';
 import { ContactForm } from '../../components/ContactForm';
 import { ContactCode } from '../../components/Codes/ContactCode';
 import { FormData } from '../../types/FormData';
-import { MessageAccepted } from '../../components/MessageAccepted';
-
 
 const initialValue = { 
   name: '',
@@ -39,7 +37,6 @@ export const ContactMe = () => {
 
         <C.Form>
           <ContactForm setFormData={ setFormData } />
-          {/* <MessageAccepted /> */}
 
           { useWindowDimensions().width >= 1023 && <ContactCode data={ formData } /> }
         </C.Form>

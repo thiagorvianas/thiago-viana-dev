@@ -15,6 +15,6 @@ module.exports = {
   },
 
   async down (queryInterface, Sequelize) {
-    await queryInterface.bulkDelete('Experience', null, {});
+    await queryInterface.bulkDelete('experiences', null, {});
   }
 };

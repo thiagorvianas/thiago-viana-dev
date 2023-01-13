@@ -107,7 +107,7 @@ console.log(projects);
 
             <CardProject data={ project } />
           </C.Project>
-        )) : <C.Loading><p>loading...</p></C.Loading> }
+        )) : <C.Loading><p>loading</p></C.Loading> }
       </C.DataContent>
     </C.Container>
   );    

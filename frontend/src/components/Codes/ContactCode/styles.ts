@@ -16,6 +16,10 @@ export const DataContainer = styled.div<{open: boolean}>`
     }
 `;
 
+export const Data = styled.div`
+    display: flex;
+`;
+
 export const Counter = styled.div``;
 
 export const Number = styled.div`
@@ -168,6 +172,7 @@ export const ObjectContent = styled.div`
 
     span {
         color: #607B96;
+        width: 120px;
     }
 
     p {

@@ -3,7 +3,7 @@ import CertificatesService from './Certificate.service';
 import EducationsService from './Education.service';
 import ExperiencesService from './Experience.service';
 import ProjectsService from './Project.service';
-
+import MessagesService from './Message.service';
 
 export {
     BiographiesService,
@@ -11,4 +11,5 @@ export {
     EducationsService,
     ExperiencesService,
     ProjectsService,
+    MessagesService
 };

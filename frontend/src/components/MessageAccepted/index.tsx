@@ -1,6 +1,10 @@
 import * as C from './styles';
 
-export function MessageAccepted() {
+type props = {
+  showForm(status: boolean): void;
+}
+
+export function MessageAccepted({ showForm }: props) {
   return (
     <C.Container>
       <C.Message>
@@ -8,7 +12,7 @@ export function MessageAccepted() {
         <p>Your message has been accepted. You will recieve answer really soon!</p>
       </C.Message>
 
-      <C.NewMsgBtn>send-new-message</C.NewMsgBtn>
+      <C.NewMsgBtn onClick={ () => showForm(true) }>send-new-message</C.NewMsgBtn>
     </C.Container>
   );
 }

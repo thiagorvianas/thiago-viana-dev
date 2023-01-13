@@ -22,7 +22,7 @@ module.exports = {
   },
 
   async down (queryInterface, Sequelize) {
-    await queryInterface.bulkDelete('Projects', null, {});
+    await queryInterface.bulkDelete('projects', null, {});
   }
 };
  

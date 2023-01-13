@@ -62,13 +62,38 @@ export const Loading = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
-
+    
     p {
+        padding: 50px 0;
         color: #607B96;
         font-size: 26px;
     }
+
+    &::after {
+        color: #607B96;
+        font-size: 26px;
+        display: flex;
+        animation: ellipsis steps(4,end) 900ms infinite;
+        content: ".";
+        width: 1em;
+        text-align: left;
+      }
+      @keyframes ellipsis {
+        0% {
+          content: ".";
+        }
+        33% {
+          content: "..";
+        }
+        66% {
+          content: "...";
+        }
+      }
 `;
+
+export const Dots = styled.span`
+  
+`
 
 export const Project = styled.div`
     margin: 30px;
