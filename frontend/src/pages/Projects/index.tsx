@@ -110,5 +110,5 @@ console.log(projects);
         )) : <C.Loading><p>loading</p></C.Loading> }
       </C.DataContent>
     </C.Container>
-  );    
+  );
 };
