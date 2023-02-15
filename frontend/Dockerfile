@@ -1,13 +1,11 @@
-FROM node:14-alpine
+FROM node:16.14-alpine
 
-EXPOSE 3000
-
-WORKDIR /frontend
-
-COPY package*.json .
-
-RUN npm install
+WORKDIR /app-frontend
 
 COPY . .
+
+RUN npm i
+
+EXPOSE 3000
 
 ENTRYPOINT [ "npm", "start" ]

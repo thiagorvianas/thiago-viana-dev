@@ -1,13 +1,12 @@
-FROM node:14-alpine
 
-EXPOSE 3001
+FROM node:16.14-alpine
 
-WORKDIR /backend
-
-COPY package*.json .
-
-RUN npm install
+WORKDIR /app-backend
 
 COPY . .
+
+RUN npm i
+
+EXPOSE 3001
 
 ENTRYPOINT [ "npm", "run", "dev" ]
