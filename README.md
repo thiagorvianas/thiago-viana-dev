@@ -36,6 +36,6 @@ Esse UX/UI Design incrível do site foi desenvolvido por Yanka Darelova: https:/
 
 ### DEPLOY
 
-- Railway
+- Hostinger
 
 ‌
