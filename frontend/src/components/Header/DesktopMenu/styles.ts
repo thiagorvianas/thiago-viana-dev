@@ -18,6 +18,10 @@ export const Menu = styled.nav`
         border-left: 1px solid #1E2D3D;
         justify-content: flex-end;
         text-align: center;
+
+        :hover {
+            opacity: 90%;
+        }
     }
 `;
 
@@ -48,7 +52,7 @@ export const Before = styled.div`
 `;
 
 export const Logo = styled.img`
-    width: 180px;
+    width: 85px;
     margin: 0 100px;
 `;
 

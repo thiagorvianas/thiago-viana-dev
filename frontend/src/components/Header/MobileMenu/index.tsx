@@ -24,7 +24,7 @@ export function MobileMenu() {
         { openMenu &&
           <C.OpenedMenu>
             <C.NavItems>
-              <Link className="nav-item" to="/">
+              <Link className="nav-item" to="/" onClick={ () => SetOpenMenu(!openMenu) }>
                 <C.Selected selected={ location === "/" } />
 
                 <C.LinkText selected={ location === "/" }>
@@ -32,7 +32,7 @@ export function MobileMenu() {
                 </C.LinkText>
               </Link>
 
-              <Link className="nav-item" to="/about-me">
+              <Link className="nav-item" to="/about-me" onClick={ () => SetOpenMenu(!openMenu) }>
                 <C.Selected  selected={ location === "/about-me" } />
 
                 <C.LinkText selected={ location === "/about-me" }>
@@ -40,7 +40,7 @@ export function MobileMenu() {
                 </C.LinkText>
               </Link>
 
-              <Link className="last nav-item" to="/projects">
+              <Link className="last nav-item" to="/projects" onClick={ () => SetOpenMenu(!openMenu) }>
                 <C.Selected  selected={ location === "/projects" } />
 
                 <C.LinkText selected={ location === "/projects" }>
@@ -48,7 +48,7 @@ export function MobileMenu() {
                 </C.LinkText>
               </Link>
 
-              <Link className="nav-item" to="/contact-me">
+              <Link className="nav-item" to="/contact-me" onClick={ () => SetOpenMenu(!openMenu) }>
                 <C.Selected  selected={ location === "/contact-me" } />
                 
                 <C.LinkText selected={ location === "/contact-me" }>

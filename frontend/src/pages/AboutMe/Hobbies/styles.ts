@@ -9,6 +9,13 @@ export const Container = styled.div`
     width: 100%;
 `;
 
+export const Subcontainer = styled.div`
+    @media (min-width: 1023px) {
+        overflow: auto;
+        height: 100%;
+    }
+`
+
 export const DataContainer = styled.div`
     display: flex;
     height: 100%;
@@ -26,6 +33,11 @@ export const Content = styled.div`
     border-right: 1px solid #1E2D3D;
     width: 100%;
     height: 100%;
+
+    @media (min-width: 1023px) {
+        overflow: auto;
+        height: 85%;
+    }
 `;
 
 export const DataContent = styled.div`

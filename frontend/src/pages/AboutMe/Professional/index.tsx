@@ -30,11 +30,11 @@ export const ProfessionalInfo = () => {
   return(
     <C.Container>
       <MiddleSidebar items={
-        <>
+        <C.Subcontainer>
           <ItemDispenser
             dispenserTitle="professional-info"
             setOpen={ setOpen }
-            items={
+            items={ useWindowDimensions().width >= 1023 ? (
               <C.Items> 
                 <FolderDispenser
                   folderTitle="experiences"
@@ -74,11 +74,14 @@ export const ProfessionalInfo = () => {
                   }
                 />
               </C.Items>
+            ) : (
+              <></>
+            )
             } 
           />
           
           { useWindowDimensions().width >= 1023 && <Contacts />}
-        </>
+        </C.Subcontainer>
       } />
 
         <C.Content>
@@ -96,12 +99,53 @@ export const ProfessionalInfo = () => {
 
             { useWindowDimensions().width < 1023 ?
             ( open && 
-              <C.DataContent>
-                { 
-                  dataId === 1000 ?
-                  <DefaultContent /> : <ExperienceData data={ experiences[dataId] } />
-                }
-              </C.DataContent>
+              <>
+                <C.Items> 
+                  <FolderDispenser
+                    folderTitle="experiences"
+                    color="#E99287"
+                    items={
+                      experiences.map((item) => (
+                        <C.HandleItem
+                          onClick={ () => {
+                            setDataId(item.id - 1);
+                            setFolder('experiences');
+                          }}
+                          selected={dataId === (item.id - 1)}
+                        >
+                          <Item ItemTitle={item.title} />
+                        </C.HandleItem>
+                      ))
+                    }
+                  />
+
+                  <FolderDispenser
+                    folderTitle="stacks"
+                    color="#3A49A4"
+                    items={
+                      <>
+                        <StackItem ItemTitle="react.js" stackIcon={ <DiReact /> } />
+                        <StackItem ItemTitle="javascript" stackIcon={ <DiJavascript1 /> } />
+                        <StackItem ItemTitle="redux" stackIcon={ <SiRedux /> } />
+                        <StackItem ItemTitle="rest api" stackIcon={ <TbApi /> } />
+                        <StackItem ItemTitle="docker" stackIcon={ <SiDocker /> } />
+                        <StackItem ItemTitle="html" stackIcon={ <SiHtml5 /> } />
+                        <StackItem ItemTitle="css" stackIcon={ <SiCss3 /> } />
+                        <StackItem ItemTitle="mySql" stackIcon={ <GrMysql /> } />
+                        <StackItem ItemTitle="mongoDb" stackIcon={ <SiMongodb /> } />
+                        <StackItem ItemTitle="git" stackIcon={ <DiGit /> } />
+                        <StackItem ItemTitle="gitHub" stackIcon={ <DiGithubBadge /> } />
+                      </>
+                    }
+                  />
+                </C.Items>
+                <C.DataContent>
+                  { 
+                    dataId === 1000 ?
+                    <DefaultContent /> : <ExperienceData data={ experiences[dataId] } />
+                  }
+                </C.DataContent>
+              </>
             ) :
               <C.DataContent>
                 { 

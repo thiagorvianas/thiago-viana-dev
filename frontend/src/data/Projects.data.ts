@@ -13,7 +13,7 @@ export const stacksData = [
     },
     {
         id: 4,
-        name: 'rest-api'
+        name: 'api'
     },
     {
         id: 5,
@@ -38,6 +38,10 @@ export const stacksData = [
     {
         id: 10,
         name: 'styled-components'
+    },
+    {
+        id: 10,
+        name: 'python'
     }
 ];
 

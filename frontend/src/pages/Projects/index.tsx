@@ -15,7 +15,10 @@ export const Projects = () => {
   const [load, setLoad] = useState(false);
   const [allProjects, setAllProjects] = useState<ProjectData[]>([]);
   const [projects, setProjects] = useState<ProjectData[]>([]);
-console.log(projects);
+
+  useEffect(() => {
+    document.title = 'Thiago Viana Dev | Projects';
+  }, []);
 
   const api = useApi();
 

@@ -1,6 +1,6 @@
 import * as C from './styles';
 import { StackData } from '../../types/StackData';
-import { DiJavascript1, DiReact } from 'react-icons/di';
+import { DiJavascript1, DiReact, DiPython } from 'react-icons/di';
 import { GrMysql } from 'react-icons/gr';
 import { SiCss3, SiDocker, SiHtml5, SiMongodb, SiRedux, SiStyledcomponents } from 'react-icons/si';
 import { TbApi } from 'react-icons/tb';
@@ -25,11 +25,15 @@ export function FilterItem({ stack, filtersList, setFilters }: props) {
         return (
           <DiJavascript1 />
         );
+      case 'python':
+        return (
+          <DiPython />
+        );
       case 'redux':
         return (
           <SiRedux />
         );
-      case 'rest-api':
+      case 'api':
         return (
           <TbApi />
         );

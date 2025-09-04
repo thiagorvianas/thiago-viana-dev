@@ -29,7 +29,7 @@ export const PersonalInfo = () => {
   return(
     <C.Container>
       <MiddleSidebar items={
-        <>
+        <C.Subcontainer>
           <ItemDispenser
             dispenserTitle="personal-info"
             setOpen={ setOpen }
@@ -75,7 +75,7 @@ export const PersonalInfo = () => {
                   folderTitle="certificates"
                   color="#E99287"
                   items={
-                    certificatesData.map((item) => (
+                    [...certificatesData].reverse().map((item) => (
                       <C.HandleItem
                         onClick={ () => {
                           setDataId(item.id - 1);
@@ -93,7 +93,7 @@ export const PersonalInfo = () => {
           />
 
           { useWindowDimensions().width >= 1023 && <Contacts /> }
-        </>
+        </C.Subcontainer>
       } />
 
         <C.Content>

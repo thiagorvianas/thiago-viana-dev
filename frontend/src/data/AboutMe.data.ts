@@ -1,66 +1,129 @@
 export const experiences = [
     {
         id: 1,
-        title: 'art director',
-        company: 'xpert lançamentos',
+        title: 'administrative assistant',
+        company: 'transbraga cargas e encomendas',
         modality: 'full time',
-        start: 'september, 2020',
-        workingNow: false,
-        end: 'april, 2021',
+        start: 'november, 2023',
+        workingNow: true,
+        end: 'now',
         attributes: [
-        'Led the audiovisual team in infoproduct launches and digital marketing management.'
+            'Implemented improvements in the ERP system, integrating administrative and accounts receivable processes.',
+            'Contributed to the standardization of operational flows, reducing risks and rework.',
+            'Developed institutional website and digital materials to support the company\'s online presence.'
         ],
         skills: [
+            'ERP System',
+            'Administrative management',
             'Web development',
-            'React.js',
-            'Styled-components',
-            'Front-End Development',
-            'Git',
-            'Back-End Web Development',
-            'HTML5',
-            'Motion Design',
-            'Digital marketing',
-            'Visual identity',
-            'Video edition'
+            'Digital design',
+            'Operational processes'
         ]
     },
     {
         id: 2,
-        title: 'fullStack designer',
-        company: 'datamérica',
-        modality: 'part time',
-        start: 'august, 2021',
+        title: 'full stack developer',
+        company: 'escreva comigo | academia de redação',
+        modality: 'full time',
+        start: 'may, 2021',
         workingNow: true,
         end: 'now',
         attributes: [
-        'Integrated the marketing team in the creation of strategies, visual identities, web applications and advertisements.',
-        'FrontEnd development using JavaScript, CSS, Styled Components and React.'
+            'Development of essay correction platform for civil service examination.',
+            'Frontend development (React.js) and REST API integration.',
+            'Adoption of agile methodologies, with continuous and scalable deliveries.'
         ],
         skills: [
-            'User Experience (UX)', 
-            'Communication', 
-            'Management', 
-            'Digital Marketing', 
-            'Graphic Design', 
-            'Video Editing'
+            'React.js',
+            'REST APIs',
+            'Agile methodologies',
+            'Frontend development',
+            'Educational platforms'
         ]
     },
+    {
+        id: 3,
+        title: 'marketing director',
+        company: 'escreva seu futuro - cursos de redação',
+        modality: 'full time',
+        start: 'april, 2021',
+        workingNow: true,
+        end: 'now',
+        attributes: [
+            'Structured digital marketing strategies that expanded the brand\'s online presence and increased student enrollment.',
+            'Created and managed visual identities, paid campaigns and web applications, aligning communication and commercial results.',
+            'Collaborated directly in the growth of the educational project, combining technology and marketing.'
+        ],
+        skills: [
+            'Digital marketing',
+            'Brand management',
+            'Visual identity design',
+            'Paid campaigns',
+            'Web development',
+            'Commercial strategies'
+        ]
+    },
+    {
+        id: 4,
+        title: 'full stack designer',
+        company: 'datamérica',
+        modality: 'full time',
+        start: 'august, 2021',
+        workingNow: false,
+        end: 'november, 2023',
+        attributes: [
+            'Worked on the development of the company\'s business management system, focusing on frontend (React.js) and automated testing (Cypress).',
+            'Collaborated on marketing projects and web application development, using JavaScript, CSS, Styled-Components and WordPress.',
+            'Contributed to improving the performance of internal systems, ensuring greater reliability of deliveries.'
+        ],
+        skills: [
+            'React.js',
+            'Cypress',
+            'JavaScript',
+            'CSS',
+            'Styled-Components',
+            'WordPress',
+            'Management systems',
+            'Automated testing'
+        ]
+    },
+    {
+        id: 5,
+        title: 'marketing art director',
+        company: 'xpert lançamentos',
+        modality: 'full time',
+        start: 'september, 2020',
+        workingNow: false,
+        end: 'march, 2021',
+        attributes: [
+            'Led the audiovisual and design team in infoproduct launches, coordinating campaigns and creative pieces.',
+            'Supported digital marketing management, strengthening the visual identity and communication of projects.',
+            'Contributed to successful launches, delivering materials that increased campaign conversion.'
+        ],
+        skills: [
+            'Audiovisual design',
+            'Digital marketing',
+            'Team management',
+            'Visual identity',
+            'Creative campaigns',
+            'Infoproducts'
+        ]
+    }
 ];
 
 export const bioData = [
     {
         id: 1,
         text: [
-            'Since I was a child I have always been passionate about technology.',
-            'I created game websites, blogs, made designs, videos, tried to create games and understand what was behind what I saw on the screens to reproduce. Even so, having to choose very young, when I entered higher education I chose the Nutrition course...',
-
-            'During the pandemic, an opportunity arose for me to have a first experience of working as a designer and video editor for digital marketing. It was then that I entered the Marketing Management course, to help me in the new job in the area in which I work until today.',
-
-            'But at the end of the year 2021 on a trip I crossed again with the area that I have always been passionate about, programming. Since then I\'ve sought to learn and improve myself more and more, that\'s when I met Trybe and decided to make a career transition to the technology area as a FrontEnd Developer.',
-
-            'After almost a year I learned HTML, CSS, JavaScript, React.js, Redux, Docker, Node.js, SQL, Express, Sequelize, JWT, TypeScript...',
-
-            'Today, I\'m almost done with the BackEnd module and ready to work in the area that I found myself very happy with.'
+            'Fullstack Developer with experience in React.js, TypeScript and Node.js, applying agile methodologies to deliver scalable and high-performance solutions.',
+            
+            'I worked on business management systems, educational platforms (EdTech) and digital marketing projects, combining background in design and marketing to create functional, intuitive and visually attractive applications.',
+            
+            'My journey in technology started early, always fascinated by understanding what was behind the screens. During the pandemic, I had my first professional experience as a designer and video editor for digital marketing.',
+            
+            'In 2021, during a trip, I rediscovered my passion for programming. Since then, I have been seeking to learn and improve constantly, making a career transition to the technology area as a Fullstack Developer.',
+            
+            'Today, with experience in React.js, TypeScript, Node.js, Cypress, MySQL, WordPress, REST API and Git/GitHub, I am ready to contribute to challenging and innovative projects.'
         ]
     }
 ];
@@ -69,17 +132,17 @@ export const educationData = [
     {
         id: 1,
         title: 'marketing management',
-        type: 'higher technology course',
-        institution: 'puc mg',
+        type: 'higher technology course (cst)',
+        institution: 'puc minas',
         start: 'august, 2021',
-        end: 'june, 2023'
+        end: 'august, 2023'
     },
     {
         id: 2,
-        title: 'web development',
+        title: 'information technology',
         type: 'course',
         institution: 'trybe',
-        start: 'march, 2022',
+        start: 'february, 2022',
         end: 'march, 2023'
     }
 ]
@@ -108,9 +171,16 @@ export const certificatesData = [
     },
     {
         id: 4,
-        title: 'Module - Front End',
+        title: 'module - Front End',
         institution: 'trybe',
         emission: 'september, 2022',
         link: 'https://www.credential.net/30f9f1b9-36af-46ab-8ca7-5b1b366b789f',
+    },
+    {
+        id: 5,
+        title: 'module - Back End',
+        institution: 'trybe',
+        emission: 'february, 2023',
+        link: 'https://www.credential.net/93c5e8ba-fc23-4c25-8b6f-65ac935f85c3',
     },
 ]

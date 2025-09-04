@@ -73,7 +73,7 @@ export const GameContent = styled.div<{image: string}>`
     height: 510px;
     border-radius: 100%;
     background-image: url('${(props) => props.image}');
-    background-size: contain;
+    background-size: cover;
     background-position: center;
  
     @media (max-width: 1023px) {

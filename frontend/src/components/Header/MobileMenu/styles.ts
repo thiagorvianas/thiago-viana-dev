@@ -41,7 +41,7 @@ export const Before = styled.div`
 `;
 
 export const Logo = styled.img`
-    width: 140px;
+    width: 85px;
     margin-left: 20px;
 `;
 

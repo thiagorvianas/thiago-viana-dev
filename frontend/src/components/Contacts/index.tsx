@@ -13,8 +13,13 @@ export function Contacts() {
       setOpen={ setOpen }
         items={
           <C.Items>
-            <ContactItem type="email" ItemTitle="trodrigo@gmail.com"/>
-            <ContactItem type="phone" ItemTitle="+55 (86) 9 9962-6819"/>
+            <a href="mailto:contato@thiagoviana.dev" target="_blank">
+              <ContactItem type="email" ItemTitle="contato@thiagoviana.dev"/>
+            </a>
+
+            <a href="https://wa.me/5586988786819"  target="_blank">
+              <ContactItem type="phone" ItemTitle="+55 (86) 9 8878-6819"/>
+            </a>
           </C.Items>
         }
     />

@@ -13,6 +13,7 @@ import { MdSportsSoccer } from 'react-icons/md';
 import { GiMuscleUp } from 'react-icons/gi';
 import { RiBoxingFill } from 'react-icons/ri';
 import { BiWorld } from 'react-icons/bi';
+import { IoMdFitness } from 'react-icons/io';
 import { DefaultContent } from '../../../components/Codes/AboutData/DefaultContent';
 import useWindowDimensions from '../../../utils/UseWindowDimentions';
 
@@ -23,7 +24,7 @@ export const HobbiesInfo = () => {
   return(
     <C.Container>
       <MiddleSidebar items={
-        <>
+        <C.Subcontainer>
           <ItemDispenser
             dispenserTitle="hobbies-info"
             setOpen={ setOpen }
@@ -43,6 +44,7 @@ export const HobbiesInfo = () => {
                   items={
                     <>
                       <StackItem ItemTitle="bodybuilding" stackIcon={ <GiMuscleUp /> } />
+                      <StackItem ItemTitle="crossfit" stackIcon={ <IoMdFitness /> } />
                       <StackItem ItemTitle="soccer" stackIcon={ <MdSportsSoccer /> } />
                       <StackItem ItemTitle="boxing" stackIcon={ <RiBoxingFill /> } />
                     </>
@@ -61,7 +63,7 @@ export const HobbiesInfo = () => {
           />
 
           { useWindowDimensions().width >= 1023 && <Contacts /> }
-        </>
+        </C.Subcontainer>
       } />
 
       { useWindowDimensions().width >= 1023 &&

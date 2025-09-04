@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import * as C from './styles';
 import { MiddleSidebar } from '../../components/MiddleSidebar';
 import { Contacts } from '../../components/Contacts';
@@ -17,6 +18,10 @@ const initialValue = {
 export const ContactMe = () => {
   const [folder, setFolder] = useState('contact-me');
   const [formData, setFormData] = useState<FormData>(initialValue);
+
+  useEffect(() => {
+    document.title = 'Thiago Viana Dev | Contact me';
+  }, []);
 
   return(
     <C.Container>

@@ -13,19 +13,19 @@ export function PresentationHome () {
           <C.Hello>
             <h4>Hi all. I am</h4>
             <h1>Thiago Viana</h1>
-            <h3>{'> '}Front-end developer</h3>
+            <h3>{'> '}FullStack developer</h3>
           </C.Hello>
 
           <C.Links>
-            { useWindowDimensions().width >= 1023 && <SingleLineComment text="complete the game to continue" />}
+            { /* useWindowDimensions().width >= 1023 && <SingleLineComment text="complete the game to continue" /> */ }
             <SingleLineComment text="you can also see it on my Github page or Linkedin" />
             
-            <a href="https://linkedin.com/in/thiagovianadev/" target="_blank" rel="noreferrer">
-              <Const constName="githubLink" constString="https://linkedin.com/in/thiagovianadev/" />
+            <a href="https://github.com/thiagorvianas" target="_blank" rel="noreferrer">
+              <Const constName="githubLink" constString="https://github.com/thiagorvianas" />
             </a>
 
-            <a href="https://linkedin.com/in/thiagovianadev/" target="_blank" rel="noreferrer">
-              <Const constName="linkedinLink" constString="https://linkedin.com/in/thiagovianadev/" />
+            <a href="https://linkedin.com/in/thiagorvianas" target="_blank" rel="noreferrer">
+              <Const constName="linkedinLink" constString="https://linkedin.com/in/thiagorvianas" />
             </a>
           </C.Links>
         </C.TextContent>

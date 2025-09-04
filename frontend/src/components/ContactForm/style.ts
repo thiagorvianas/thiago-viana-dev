@@ -67,6 +67,10 @@ export const Message = styled.textarea`
     color: #465E77;
     font-size: 16px;
 
+    &:focus {
+        border: 1px solid #607B96;
+    }
+
     @media (max-width: 1023px) {
         width: 320px;
     }

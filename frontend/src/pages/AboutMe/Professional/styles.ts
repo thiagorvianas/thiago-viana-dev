@@ -14,16 +14,23 @@ export const Container = styled.div`
     }
 `;
 
+export const Subcontainer = styled.div`
+    @media (min-width: 1023px) {
+        overflow: auto;
+        height: 100%;
+    }
+`
+
 export const DataContainer = styled.div<{open: boolean}>`
     display: flex;
     height: 100%;
     padding: 30px 75px;
-    
+
     @media (max-width: 1023px) {
         display: flex;
         flex-direction: column;
         overflow: hidden;
-        padding: ${({open}) => open ? '30px 15px' : '0'};
+        padding: ${({open}) => open ? '0px 15px 30px' : '0'};
     }
 `;
 
@@ -40,6 +47,11 @@ export const Content = styled.div`
     border-right: 1px solid #1E2D3D;
     width: 100%;
     height: 100%;
+
+    @media (min-width: 1023px) {
+        overflow: auto;
+        height: 85%;
+    }
 
     @media (max-width: 1023px) {
         display: flex;

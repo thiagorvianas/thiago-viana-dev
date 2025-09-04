@@ -1,3 +1,12 @@
-import { PresentationHome } from "../../components/PresentationHome";
+import { useEffect } from 'react';
+import { PresentationHome } from '../../components/PresentationHome';
 
-export const Hello = () => (<PresentationHome />);
+export const Hello = () => {
+  useEffect(() => {
+    document.title = 'Thiago Viana Dev | Home';
+  }, []);
+
+  return (
+    <PresentationHome />
+  );
+}

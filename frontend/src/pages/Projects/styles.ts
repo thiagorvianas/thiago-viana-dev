@@ -24,7 +24,7 @@ export const ProjectTitle = styled.div`
     color: #607B96;
     font-size: 16px;
     margin-bottom: 10px;
-    width: 345px;
+    width: 320px;
     
     p {
         white-space: nowrap;
@@ -43,7 +43,7 @@ export const DataContent = styled.div`
     line-height: 25px;
     width: 100%;
     margin-bottom: 100px;
-    padding: 75px;
+    padding: 30px;
     flex-wrap: wrap;
     overflow: auto;
 
@@ -96,7 +96,7 @@ export const Dots = styled.span`
 `
 
 export const Project = styled.div`
-    margin: 30px;
+    margin: 15px;
 
     @media (max-width: 1023px) {
         margin: 30px 5px;

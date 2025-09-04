@@ -9,6 +9,7 @@ export const Container = styled.div`
 
     @media (max-width: 1023px) {
         width: 100%;
+        height: 100%;
         border: none;
         overflow: hidden;
     }
@@ -21,13 +22,13 @@ export const Dispenser = styled.div`
     color: #FFFFFF;
     border-bottom: 1px solid #1E2D3D;
     user-select: none;
-
+    
     @media (max-width: 1023px) {
         background-color: #1E2D3D;
         margin-bottom: 5px;
         padding: 0 15px;
         width: 100%;
-        overflow: hidden;
+        overflow: hidden !important;
         min-height: 50px;
     }
 

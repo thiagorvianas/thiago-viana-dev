@@ -26,6 +26,10 @@ export const Social = styled.a`
     border-right: 1px solid #1E2D3D;
     padding-right: 20px;
     color: #607B96;
+
+    :hover {
+        opacity: 90%;
+    }
 `;
 
 export const GitHubText = styled.div`

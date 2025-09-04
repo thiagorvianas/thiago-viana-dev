@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import * as C from './styles';
 import useWindowDimensions from '../../utils/UseWindowDimentions';
 
@@ -23,6 +23,10 @@ export const AboutMe = () => {
         break;
     }
   }
+
+  useEffect(() => {
+    document.title = 'Thiago Viana Dev | About me';
+  }, []);
 
   return(
     <C.Container>
